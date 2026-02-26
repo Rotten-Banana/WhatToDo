@@ -1,0 +1,102 @@
+.custom-btn {
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: inherit;
+}
+
+.custom-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.custom-btn:active {
+    transform: scale(0.98);
+}
+
+/* Sizes */
+.btn-small {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.btn-medium {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.btn-large {
+    padding: 14px 28px;
+    font-size: 18px;
+}
+
+/* Variants */
+.btn-primary {
+    background: linear-gradient(135deg, #646cff 0%, #9089fc 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(100, 108, 255, 0.3);
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(100, 108, 255, 0.5);
+    filter: brightness(1.1);
+}
+
+.btn-secondary {
+    background: #444;
+    color: white;
+    border: 1px solid #666;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: #555;
+    border-color: #777;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ff4d4d 0%, #ff8080 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);
+}
+
+.btn-danger:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 77, 77, 0.5);
+    filter: brightness(1.1);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #4caf50 0%, #81c784 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-success:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.5);
+    filter: brightness(1.1);
+}
+
+.btn-icon {
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #333;
+    border: 1px solid #555;
+    color: white;
+}
+
+.btn-icon:hover:not(:disabled) {
+    background: #555;
+    transform: scale(1.1);
+}

@@ -1,0 +1,7 @@
+services:
+  whattodo:
+    container_name: whattodo
+    image: 13rottenbanana/whattodo
+    build:
+      context: .
+      dockerfile: Dockerfile

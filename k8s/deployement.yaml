@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whattodo-deployment
+  namespace: test
+  labels:
+    app: whattodo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: whattodo
+  template:
+    metadata:
+      labels:
+        app: whattodo
+    spec:
+      containers:
+      - name: whattodo
+        image: 13rottenbanana/whattodo
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "200m"
