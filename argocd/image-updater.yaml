@@ -1,0 +1,17 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: whattodo-app
+  namespace: argocd
+spec:
+  commonUpdateSettings:
+    updateStrategy: digest
+  applicationRefs:
+    - namePattern: whattodo-app
+      images:
+        - alias: whattodo
+          imageName: docker.io/13rottenbanana/whattodo:latest
+          commonUpdateSettings:
+            updateStrategy: digest
+      writeBackConfig:
+        method: argocd
