@@ -10,7 +10,7 @@ spec:
     - namePattern: whattodo-app
       images:
         - alias: whattodo
-          imageName: docker.io/13rottenbanana/whattodo:latest
+          imageName: 13rottenbanana/whattodo:latest
           commonUpdateSettings:
             updateStrategy: digest
       writeBackConfig:
