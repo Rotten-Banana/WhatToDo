@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './ItemModal.css';
 import { Button } from '../Button/Button';
 
+//Test for image update
+
 interface ItemModalProps {
     isOpen: boolean;
     onClose: () => void;
