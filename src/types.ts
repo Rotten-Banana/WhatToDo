@@ -3,7 +3,7 @@ export interface TodoItem {
   title: string;
   children: TodoItem[];
   completed: boolean;
-  priority: number; // 1 (Low) to 5 (High)
+  priority: number;
   color?: string;
   parentId?: string | null;
 }
