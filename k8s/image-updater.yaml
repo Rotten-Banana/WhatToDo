@@ -1,0 +1,14 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: whattodo-app
+  namespace: argocd
+spec:
+  appSelector:
+    matchLabels:
+      app.kubernetes.io/name: whattodo-app
+  images:
+    - image: 13rottenbanana/whattodo-app
+      updateStrategy:
+        type: Digest
+  interval: 2m

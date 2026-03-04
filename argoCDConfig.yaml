@@ -3,9 +3,6 @@ kind: Application
 metadata:
   name: whattodo-app
   namespace: argocd
-  annotations:
-    argocd-image-updater.argoproj.io/image-list: whattodo=13rottenbanana/whattodo
-    argocd-image-updater.argoproj.io/whattodo.update-strategy: digest
 spec:
   project: default
   source:
